@@ -1,4 +1,4 @@
-For add my SimpleMenu API you need to add in pom.xmp:
+For add my SimpleMenu API you need to add in pom.xml:
 
      <repository>
             <id>jitpack.io</id>
