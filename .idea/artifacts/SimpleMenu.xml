@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="SimpleMenu">
+    <output-path>$USER_HOME$/Music/Servers/Paper 1.21.4/plugins</output-path>
+    <root id="archive" name="SimpleMenu.jar">
+      <element id="module-output" name="GuiAPI" />
+    </root>
+  </artifact>
+</component>
