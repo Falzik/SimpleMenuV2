@@ -5,9 +5,11 @@ For add my SimpleMenu API you need to add in pom.xml:
             <url>https://jitpack.io</url>
         </repository>
 
+<version>Write here version api, now it's v1.0</version>
+
         <dependency>
             <groupId>com.github.Falzik</groupId>
             <artifactId>SimpleMenu</artifactId>
-            <version>v1.0</version>
+            <version>LAST_VERSION</version>
         </dependency>
 
