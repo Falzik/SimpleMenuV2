@@ -1,10 +1,13 @@
 package me.falzik.vanilla.guiAPI.test;
 
 
+import me.falzik.vanilla.guiAPI.GuiAPI;
 import me.falzik.vanilla.guiAPI.menu.ButtonResult;
 import me.falzik.vanilla.guiAPI.menu.SimpleMenu;
+import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.scheduler.BukkitRunnable;
 
 /**
  * Author: Falzik
@@ -14,15 +17,16 @@ import org.bukkit.inventory.ItemStack;
 public class KillMenu extends SimpleMenu {
 
     public KillMenu() {
-        super("Убийственное меню", Rows.ONE);
+        super("Kill Menu", Rows.ONE);
     }
 
     @Override
     public void onSetItems() {
         setItem(0, new ItemStack(Material.REDSTONE), ButtonResult.CLOSE, (player -> {
-            player.sendRichMessage("<green>Я не ожидал что кто-то ещё этим пользуется");
-            player.sendRichMessage("<green>Держи конфетку за это!");
+            player.sendRichMessage("<green>O, hello bro");
+            player.sendRichMessage("<green>Take a berry!");
             player.getInventory().addItem(new ItemStack(Material.SWEET_BERRIES));
         }));
+        setDesign(Material.GRAY_STAINED_GLASS_PANE, " ", ButtonResult.CANCEL);
     }
 }

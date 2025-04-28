@@ -3,9 +3,11 @@ package me.falzik.vanilla.guiAPI.menu;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.util.Consumer;
 import org.jetbrains.annotations.NotNull;
 
@@ -18,12 +20,26 @@ import java.util.Map;
  */
 
 public abstract class SimpleMenu implements Menu{
+
     private final Map<Integer, Consumer<Player>> actions = new HashMap<>();
     private static final Map<Integer, ButtonResult> itemClickResult = new HashMap<>();
     private final Inventory inventory;
 
     public SimpleMenu(String title, Rows rows) {
         this.inventory = Bukkit.createInventory(this, rows.getSize(), ChatColor.translateAlternateColorCodes('&', title));
+    }
+
+    @Override
+    public void setDesign(Material material, String name, ButtonResult result) {
+        for (int i = 0; i < inventory.getSize(); i++) {
+            if(inventory.getItem(i) == null) {
+                ItemStack itemStack = new ItemStack(material);
+                ItemMeta itemMeta = itemStack.getItemMeta();
+                itemMeta.setDisplayName(name);
+                itemStack.setItemMeta(itemMeta);
+                setItem(i, itemStack, result);
+            }
+        }
     }
 
     @Override
