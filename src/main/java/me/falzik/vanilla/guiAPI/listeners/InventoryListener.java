@@ -15,7 +15,7 @@ import org.bukkit.inventory.Inventory;
  * Created time: 27.04.2025 19:44
  */
 
-public class InventoryListener implements Listener { // Inventory Listener
+public class InventoryListener implements Listener {
 
     @EventHandler
     public void on(InventoryClickEvent e) {
