@@ -48,7 +48,6 @@ public abstract class SimpleMenu implements Menu {
 
         if(action != null) {
             action.accept(player);
-
         }
     }
 
