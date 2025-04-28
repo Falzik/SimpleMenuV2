@@ -15,7 +15,7 @@ import org.bukkit.inventory.Inventory;
  * Created time: 27.04.2025 19:44
  */
 
-public class InventoryListener implements Listener { //
+public class InventoryListener implements Listener {
 
     @EventHandler
     public void on(InventoryClickEvent e) {
@@ -26,11 +26,12 @@ public class InventoryListener implements Listener { //
 
         final Player player = (Player) e.getWhoClicked();
 
-        if(SimpleMenu.getItemClickResult().get(e.getSlot()) == ButtonResult.CANCEL) {
+        if(SimpleMenu.getButtonResult(e.getSlot()) == ButtonResult.CANCEL) {
             e.setCancelled(true);
             menu.click(player, e.getSlot());
-        } else if(SimpleMenu.getItemClickResult().get(e.getSlot()) == ButtonResult.CLOSE) {
+        } else if(SimpleMenu.getButtonResult(e.getSlot()) == ButtonResult.CLOSE) {
             e.setCancelled(true);
+            player.closeInventory();
             menu.click(player, e.getSlot());
         }
     }

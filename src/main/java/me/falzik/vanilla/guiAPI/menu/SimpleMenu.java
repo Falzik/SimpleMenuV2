@@ -19,7 +19,7 @@ import java.util.Map;
  * Created time: 27.04.2025 19:36
  */
 
-public abstract class SimpleMenu implements Menu { // Menu
+public abstract class SimpleMenu implements Menu {
 
     private final Map<Integer, Consumer<Player>> actions = new HashMap<>();
     private static final Map<Integer, ButtonResult> itemClickResult = new HashMap<>();
@@ -59,8 +59,8 @@ public abstract class SimpleMenu implements Menu { // Menu
     @Override
     public void setItem(int slot, ItemStack item, ButtonResult result,  Consumer<Player> action) {
         this.actions.put(slot, action);
-        getInventory().setItem(slot, item);
         itemClickResult.put(slot, result);
+        getInventory().setItem(slot, item);
     }
 
    public abstract void onSetItems();
@@ -68,6 +68,10 @@ public abstract class SimpleMenu implements Menu { // Menu
     @Override
     public @NotNull Inventory getInventory() {
         return inventory;
+    }
+
+    public static ButtonResult getButtonResult(int slot) {
+        return itemClickResult.get(slot);
     }
 
     public enum Rows {
