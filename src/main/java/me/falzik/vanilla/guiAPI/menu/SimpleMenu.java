@@ -19,7 +19,7 @@ import java.util.Map;
  * Created time: 27.04.2025 19:36
  */
 
-public abstract class SimpleMenu implements Menu {
+public abstract class SimpleMenu implements Menu { // Menu
 
     private final Map<Integer, Consumer<Player>> actions = new HashMap<>();
     private static final Map<Integer, ButtonResult> itemClickResult = new HashMap<>();
