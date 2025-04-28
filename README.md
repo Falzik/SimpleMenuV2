@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 For add my SimpleMenu API you need to add in pom.xml:
 
      <repository>
@@ -13,3 +14,6 @@ For add my SimpleMenu API you need to add in pom.xml:
             <version>LAST_VERSION</version>
         </dependency>
 
+=======
+# SimpleMenu
+>>>>>>> b0dcd6338b4db82ce249f648829c0df645a214cc
