@@ -6,6 +6,11 @@ import org.bukkit.inventory.InventoryHolder;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.util.Consumer;
 
+/**
+ * Author: Falzik
+ * Simple Menu Here!
+ */
+
 public interface Menu extends InventoryHolder {
 
     void click(Player player, int slot);

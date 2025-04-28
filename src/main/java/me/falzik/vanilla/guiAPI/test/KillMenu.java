@@ -14,7 +14,7 @@ import org.bukkit.scheduler.BukkitRunnable;
  * Created time: 27.04.2025 19:47
  */
 
-public class KillMenu extends SimpleMenu {
+public class KillMenu extends SimpleMenu { // Example
 
     public KillMenu() {
         super("Kill Menu", Rows.ONE);
