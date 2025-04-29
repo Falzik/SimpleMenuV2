@@ -19,6 +19,10 @@ public interface Menu extends InventoryHolder {
 
     void setItem(int slot, ItemStack item, ButtonResult result,  Consumer<Player> action);
 
+    ButtonResult getButtonResult(int slot);
+
+    void setDesing(Material material, String name, ButtonResult result);
+
     void onSetItems();
 
     default void open(Player player) {

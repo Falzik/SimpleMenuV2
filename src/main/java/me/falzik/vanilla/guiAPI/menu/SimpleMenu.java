@@ -22,6 +22,7 @@ import java.util.Map;
 public abstract class SimpleMenu implements Menu {
 
     private final Map<Integer, Consumer<Player>> actions = new HashMap<>();
+    private final Map<Integer, ButtonResult> buttonResultMap = new HashMap<>();
     private final Inventory inventory;
 
     public SimpleMenu(String title, Rows rows) {
@@ -38,6 +39,19 @@ public abstract class SimpleMenu implements Menu {
     }
 
     @Override
+    public void setDesing(Material material, String name, ButtonResult result) {
+        for (int i = 0; i < inventory.getSize(); i++) {
+            if(inventory.getItem(i) == null) {
+                ItemStack itemStack = new ItemStack(material);
+                ItemMeta itemMeta = itemStack.getItemMeta();
+                itemMeta.setDisplayName(ChatColor.translateAlternateColorCodes('&', name));
+                itemStack.setItemMeta(itemMeta);
+                setItem(i, itemStack, result);
+            }
+        }
+    }
+
+    @Override
     public void setItem(int slot, ItemStack item, ButtonResult result) {
         setItem(slot, item, result, player -> {});
     }
@@ -45,7 +59,13 @@ public abstract class SimpleMenu implements Menu {
     @Override
     public void setItem(int slot, ItemStack item, ButtonResult result,  Consumer<Player> action) {
         this.actions.put(slot, action);
+        this.buttonResultMap.put(slot, result);
         getInventory().setItem(slot, item);
+    }
+
+    @Override
+    public ButtonResult getButtonResult(int slot) {
+        return buttonResultMap.get(slot);
     }
 
    public abstract void onSetItems();
