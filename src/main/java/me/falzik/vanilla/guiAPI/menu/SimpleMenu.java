@@ -22,29 +22,10 @@ import java.util.Map;
 public abstract class SimpleMenu implements Menu {
 
     private final Map<Integer, Consumer<Player>> actions = new HashMap<>();
-    private static final Map<Integer, ButtonResult> itemClickResult = new HashMap<>();
     private final Inventory inventory;
 
     public SimpleMenu(String title, Rows rows) {
         this.inventory = Bukkit.createInventory(this, rows.getSize(), ChatColor.translateAlternateColorCodes('&', title));
-    }
-
-    @Override
-    public void setDesign(Material material, String name, ButtonResult result) {
-        for (int i = 0; i < inventory.getSize(); i++) {
-            if(inventory.getItem(i) == null) {
-                ItemStack itemStack = new ItemStack(material);
-                ItemMeta itemMeta = itemStack.getItemMeta();
-                itemMeta.setDisplayName(name);
-                itemStack.setItemMeta(itemMeta);
-                setItem(i, itemStack, result);
-            }
-        }
-    }
-
-    @Override
-    public ButtonResult getButtonResult(int slot) {
-        return itemClickResult.get(slot);
     }
 
     @Override
@@ -64,7 +45,6 @@ public abstract class SimpleMenu implements Menu {
     @Override
     public void setItem(int slot, ItemStack item, ButtonResult result,  Consumer<Player> action) {
         this.actions.put(slot, action);
-        itemClickResult.put(slot, result);
         getInventory().setItem(slot, item);
     }
 
@@ -91,9 +71,5 @@ public abstract class SimpleMenu implements Menu {
         public int getSize() {
             return size;
         }
-    }
-
-    public static Map<Integer, ButtonResult> getItemClickResult() {
-        return itemClickResult;
     }
 }

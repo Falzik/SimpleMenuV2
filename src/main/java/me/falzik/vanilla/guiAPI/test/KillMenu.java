@@ -27,6 +27,5 @@ public class KillMenu extends SimpleMenu { // Example
             player.sendRichMessage("<green>Take a berry!");
             player.getInventory().addItem(new ItemStack(Material.SWEET_BERRIES));
         }));
-        setDesign(Material.GRAY_STAINED_GLASS_PANE, " ", ButtonResult.CANCEL);
     }
 }
