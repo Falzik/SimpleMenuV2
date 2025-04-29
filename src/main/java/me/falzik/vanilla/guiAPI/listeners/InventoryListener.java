@@ -26,13 +26,12 @@ public class InventoryListener implements Listener {
 
         final Player player = (Player) e.getWhoClicked();
 
-        if(SimpleMenu.getButtonResult(e.getSlot()) == ButtonResult.CANCEL) {
+        if(menu.getButtonResult(e.getSlot()) == ButtonResult.CANCEL) {
             e.setCancelled(true);
             menu.click(player, e.getSlot());
-        } else if(SimpleMenu.getButtonResult(e.getSlot()) == ButtonResult.CLOSE) {
-            e.setCancelled(true);
+        } else if(menu.getButtonResult(e.getSlot()) == ButtonResult.CLOSE) {
+            menu.click(player, e.getSlot());
             player.closeInventory();
-            menu.click(player, e.getSlot());
         }
     }
 

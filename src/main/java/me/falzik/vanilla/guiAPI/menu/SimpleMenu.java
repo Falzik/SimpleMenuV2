@@ -43,6 +43,11 @@ public abstract class SimpleMenu implements Menu {
     }
 
     @Override
+    public ButtonResult getButtonResult(int slot) {
+        return itemClickResult.get(slot);
+    }
+
+    @Override
     public void click(Player player, int slot) {
         final Consumer<Player> action = this.actions.get(slot);
 
@@ -68,10 +73,6 @@ public abstract class SimpleMenu implements Menu {
     @Override
     public @NotNull Inventory getInventory() {
         return inventory;
-    }
-
-    public static ButtonResult getButtonResult(int slot) {
-        return itemClickResult.get(slot);
     }
 
     public enum Rows {

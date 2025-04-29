@@ -14,9 +14,15 @@ import org.bukkit.util.Consumer;
 public interface Menu extends InventoryHolder {
 
     void click(Player player, int slot);
+
     void setItem(int slot, ItemStack item, ButtonResult result);
+
     void setItem(int slot, ItemStack item, ButtonResult result,  Consumer<Player> action);
+
     void setDesign(Material material, String name, ButtonResult result);
+
+    ButtonResult getButtonResult(int slot);
+
     void onSetItems();
 
     default void open(Player player) {
