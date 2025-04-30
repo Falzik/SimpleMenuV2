@@ -10,8 +10,8 @@ For add my SimpleMenu API you need to add in pom.xml:
 
         <dependency>
             <groupId>com.github.Falzik</groupId>
-            <artifactId>SimpleMenu</artifactId>
-            <version>v2.0</version>
+            <artifactId>SimpleMenuV2</artifactId>
+            <version>v1.0</version>
         </dependency>
 
 =======
