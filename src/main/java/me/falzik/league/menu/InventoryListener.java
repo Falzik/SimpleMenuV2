@@ -1,9 +1,6 @@
-package me.falzik.vanilla.guiAPI.listeners;
+package me.falzik.league.menu;
 
 
-import me.falzik.vanilla.guiAPI.menu.ButtonResult;
-import me.falzik.vanilla.guiAPI.menu.Menu;
-import me.falzik.vanilla.guiAPI.menu.SimpleMenu;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -26,14 +23,8 @@ public class InventoryListener implements Listener {
 
         final Player player = (Player) e.getWhoClicked();
 
-        if(menu.getButtonResult(e.getSlot()) == ButtonResult.CANCEL) {
-            e.setCancelled(true);
-            menu.click(player, e.getSlot());
-        } else if(menu.getButtonResult(e.getSlot()) == ButtonResult.CLOSE) {
-            e.setCancelled(true);
-            menu.click(player, e.getSlot());
-            player.closeInventory();
-        }
+        menu.click(player, e.getSlot());
+        e.setCancelled(true);
     }
 
 }

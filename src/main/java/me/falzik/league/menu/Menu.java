@@ -1,10 +1,11 @@
-package me.falzik.vanilla.guiAPI.menu;
+package me.falzik.league.menu;
 
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.InventoryHolder;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.util.Consumer;
+
+import java.util.function.Consumer;
 
 /**
  * Author: Falzik
@@ -15,13 +16,11 @@ public interface Menu extends InventoryHolder {
 
     void click(Player player, int slot);
 
-    void setItem(int slot, ItemStack item, ButtonResult result);
+    void setItem(int slot, ItemStack item);
 
-    void setItem(int slot, ItemStack item, ButtonResult result,  Consumer<Player> action);
+    void setItem(int slot, ItemStack item, Consumer<Player> action);
 
-    ButtonResult getButtonResult(int slot);
-
-    void setDesing(Material material, String name, ButtonResult result);
+    void setDesing(Material material, String name);
 
     void onSetItems();
 

@@ -1,6 +1,6 @@
 name: GuiAPI
 version: '1.0'
-main: me.falzik.vanilla.guiAPI.GuiAPI
+main: me.falzik.GuiAPI
 api-version: '1.21'
 authors: [ Falzik ]
 commands:

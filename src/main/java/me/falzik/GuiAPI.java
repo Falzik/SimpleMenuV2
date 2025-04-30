@@ -1,7 +1,6 @@
-package me.falzik.vanilla.guiAPI;
+package me.falzik;
 
-import me.falzik.vanilla.guiAPI.listeners.InventoryListener;
-import me.falzik.vanilla.guiAPI.test.killCmd;
+import me.falzik.league.menu.InventoryListener;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class GuiAPI extends JavaPlugin {
@@ -10,7 +9,6 @@ public final class GuiAPI extends JavaPlugin {
     public void onEnable() {
         // Plugin startup logic
         getServer().getPluginManager().registerEvents(new InventoryListener(), this);
-        getCommand("killgui").setExecutor(new killCmd());
     }
 
     @Override

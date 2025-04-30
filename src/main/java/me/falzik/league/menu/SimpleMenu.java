@@ -1,4 +1,4 @@
-package me.falzik.vanilla.guiAPI.menu;
+package me.falzik.league.menu;
 
 
 import org.bukkit.Bukkit;
@@ -8,21 +8,20 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
-import org.bukkit.util.Consumer;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.function.Consumer;
 
 /**
  * Author: Falzik
  * Created time: 27.04.2025 19:36
  */
 
-public abstract class SimpleMenu implements Menu {
+public abstract class SimpleMenu implements me.falzik.league.menu.Menu {
 
     private final Map<Integer, Consumer<Player>> actions = new HashMap<>();
-    private final Map<Integer, ButtonResult> buttonResultMap = new HashMap<>();
     private final Inventory inventory;
 
     public SimpleMenu(String title, Rows rows) {
@@ -39,33 +38,27 @@ public abstract class SimpleMenu implements Menu {
     }
 
     @Override
-    public void setDesing(Material material, String name, ButtonResult result) {
+    public void setDesing(Material material, String name) {
         for (int i = 0; i < inventory.getSize(); i++) {
             if(inventory.getItem(i) == null) {
                 ItemStack itemStack = new ItemStack(material);
                 ItemMeta itemMeta = itemStack.getItemMeta();
                 itemMeta.setDisplayName(ChatColor.translateAlternateColorCodes('&', name));
                 itemStack.setItemMeta(itemMeta);
-                setItem(i, itemStack, result);
+                setItem(i, itemStack);
             }
         }
     }
 
     @Override
-    public void setItem(int slot, ItemStack item, ButtonResult result) {
-        setItem(slot, item, result, player -> {});
+    public void setItem(int slot, ItemStack item) {
+        setItem(slot, item, player -> {});
     }
 
     @Override
-    public void setItem(int slot, ItemStack item, ButtonResult result,  Consumer<Player> action) {
+    public void setItem(int slot, ItemStack item, Consumer<Player> action) {
         this.actions.put(slot, action);
-        this.buttonResultMap.put(slot, result);
         getInventory().setItem(slot, item);
-    }
-
-    @Override
-    public ButtonResult getButtonResult(int slot) {
-        return buttonResultMap.get(slot);
     }
 
    public abstract void onSetItems();
