@@ -41,7 +41,6 @@ public class MenuManager {
         if (menu == null) return;
 
         if (!menu.getCanClose()) {
-            // Переоткрываем меню на следующий тик
             Bukkit.getScheduler().runTask(plugin, () -> menu.open(player));
         } else {
             openMenus.remove(player.getUniqueId());

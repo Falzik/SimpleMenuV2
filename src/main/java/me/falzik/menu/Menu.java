@@ -1,5 +1,6 @@
 package me.falzik.menu;
 
+import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.InventoryHolder;
 import org.bukkit.inventory.ItemStack;
@@ -12,6 +13,7 @@ public interface Menu extends InventoryHolder {
     void setItem(int slot, ItemStack itemStack);
     void setItem(int slot, ItemStack itemStack, Consumer<Player> action);
     void setItem(int slot, ItemStack itemStack, Consumer<Player> action, Consumer<ItemStack> itemStackAction);
+    void addDesign(Material material, String name);
     boolean getCanClose();
     void setCanClose(boolean canClose);
     void onSetItems();
