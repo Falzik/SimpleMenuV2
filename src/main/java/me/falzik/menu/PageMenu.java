@@ -186,6 +186,10 @@ public class PageMenu implements InventoryHolder {
         }
     }
 
+    public int getPages() {
+        return pages;
+    }
+
     @Override
     public @NotNull Inventory getInventory() {
         return mainPage; // return first page menu
