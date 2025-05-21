@@ -9,31 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="03344f96-5046-4c8a-988f-b10c422e32d0" name="Changes" comment="Update">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/falzik/menu/PageMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/me/falzik/GuiAPI.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/me/falzik/listener/InventoryListener.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/me/falzik/menu/Menu.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/me/falzik/menu/MenuManager.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/me/falzik/menu/SimpleMenu$Rows.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/me/falzik/menu/SimpleMenu.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/me/falzik/test/killcmd.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/plugin.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/original-GuiAPI-1.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/falzik/GuiAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/falzik/GuiAPI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/falzik/listener/InventoryListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/falzik/listener/InventoryListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/falzik/menu/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/falzik/menu/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/falzik/menu/SimpleMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/falzik/menu/SimpleMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/falzik/test/KillGUI.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/falzik/test/killcmd.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
-    </list>
+    <list default="true" id="03344f96-5046-4c8a-988f-b10c422e32d0" name="Changes" comment="Update" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

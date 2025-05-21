@@ -166,6 +166,26 @@ public class PageMenu implements InventoryHolder {
         }
     }
 
+    public void removeItemWithAction(ItemStack itemStackToRemove, int page) {
+        Map<Integer, ItemStack> items = itemStackByPage.get(page);
+        Map<Integer, Consumer<Player>> actions = actionByPage.get(page);
+        Inventory inventory = inventoryByPage.get(page);
+
+        if (items == null || actions == null || inventory == null) return;
+
+        for (Map.Entry<Integer, ItemStack> entry : new HashMap<>(items).entrySet()) {
+            int slot = entry.getKey();
+            ItemStack item = entry.getValue();
+
+            if (item != null && item.isSimilar(itemStackToRemove)) {
+                items.remove(slot);
+                actions.remove(slot);
+                inventory.setItem(slot, null);
+                break;
+            }
+        }
+    }
+
     @Override
     public @NotNull Inventory getInventory() {
         return mainPage; // return first page menu
