@@ -1,20 +1,22 @@
 package me.falzik.listener;
 
 
-import com.sun.source.tree.UsesTree;
-import me.falzik.GuiAPI;
 import me.falzik.menu.Menu;
 import me.falzik.menu.MenuManager;
-import org.bukkit.Bukkit;
+import me.falzik.menu.PageMenu;
+import org.bukkit.ChatColor;
+import org.bukkit.entity.Entity;
+import org.bukkit.entity.HumanEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.inventory.InventoryCloseEvent;
+import org.bukkit.inventory.Inventory;
 
-import javax.crypto.MacSpi;
-import java.util.HashMap;
-import java.util.Map;
+import java.lang.reflect.AccessFlag;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Author: Falzik
@@ -26,11 +28,15 @@ public class InventoryListener implements Listener {
     @EventHandler
     public void on(InventoryClickEvent e) {
         final Player player = (Player) e.getWhoClicked();
+        Inventory inventory = e.getClickedInventory();
 
-        if(!(e.getInventory().getHolder() instanceof Menu menu)) return;
-
-        menu.click(player, e.getSlot());
-        e.setCancelled(true);
+        if(inventory.getHolder() instanceof PageMenu pageMenu) {
+            e.setCancelled(true);
+            pageMenu.click(player, e.getSlot(), pageMenu.getPageByInventory(e.getView().getTitle()));
+        } else if(inventory.getHolder() instanceof Menu menu) {
+            e.setCancelled(true);
+            menu.click(player, e.getSlot());
+        }
     }
 
     @EventHandler

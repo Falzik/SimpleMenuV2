@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="SimpleMenu" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="03344f96-5046-4c8a-988f-b10c422e32d0" name="Changes" comment="Update">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/falzik/menu/PageMenu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/me/falzik/GuiAPI.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/me/falzik/listener/InventoryListener.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/me/falzik/menu/Menu.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/me/falzik/menu/MenuManager.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/me/falzik/menu/SimpleMenu$Rows.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/me/falzik/menu/SimpleMenu.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/me/falzik/test/killcmd.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/plugin.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/original-GuiAPI-1.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/falzik/GuiAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/falzik/GuiAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/falzik/listener/InventoryListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/falzik/listener/InventoryListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/falzik/menu/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/falzik/menu/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/falzik/menu/SimpleMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/falzik/menu/SimpleMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/falzik/test/KillGUI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/falzik/test/killcmd.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {}
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Falzik/SimpleMenu.git&quot;,
+    &quot;accountId&quot;: &quot;ca57a311-e31f-4013-bf64-2a9c385c29db&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2wJYF2GI270xIb2gFhlUt4ywD15" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Maven.GuiAPI [package].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/almat/Music/Servers/Paper 1.21.4/plugins&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15429688&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="mcdev-temp-root" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="mcdev-temp-root" />
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="03344f96-5046-4c8a-988f-b10c422e32d0" name="Changes" comment="" />
+      <created>1745761037963</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1745761037963</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Add desing">
+      <option name="closed" value="true" />
+      <created>1745809086838</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1745809086838</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Design">
+      <option name="closed" value="true" />
+      <created>1745809435711</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1745809435711</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Design">
+      <option name="closed" value="true" />
+      <created>1745810062415</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1745810062415</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Design">
+      <option name="closed" value="true" />
+      <created>1745825060914</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1745825060914</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Design">
+      <option name="closed" value="true" />
+      <created>1745847535926</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1745847535926</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Update">
+      <option name="closed" value="true" />
+      <created>1745863189352</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1745863189352</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Update">
+      <option name="closed" value="true" />
+      <created>1745863265069</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1745863265069</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Update">
+      <option name="closed" value="true" />
+      <created>1745863476639</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1745863476639</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Update">
+      <option name="closed" value="true" />
+      <created>1745863872803</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1745863872803</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add desing" />
+    <MESSAGE value="Design" />
+    <MESSAGE value="Update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update" />
+  </component>
+</project>

@@ -14,9 +14,9 @@ public interface Menu extends InventoryHolder {
     void setItem(int slot, ItemStack itemStack, Consumer<Player> action);
     void setItem(int slot, ItemStack itemStack, Consumer<Player> action, Consumer<ItemStack> itemStackAction);
     void addDesign(Material material, String name);
-    boolean getCanClose();
-    void setCanClose(boolean canClose);
+    void setCanClose(boolean setCanClose);
     void onSetItems();
+    boolean getCanClose();
 
     default void open(Player player) {
         onSetItems();

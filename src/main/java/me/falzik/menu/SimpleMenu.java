@@ -81,6 +81,11 @@ public abstract class SimpleMenu implements Menu {
     }
 
     @Override
+    public boolean getCanClose() {
+        return isCanClose;
+    }
+
+    @Override
     public void setItem(int slot, ItemStack itemStack, Consumer<Player> action, Consumer<ItemStack> itemStackAction) {
         this.playerAction.put(slot, action);
         this.itemStackAction.put(slot, itemStackAction);
@@ -90,17 +95,9 @@ public abstract class SimpleMenu implements Menu {
     }
 
     @Override
-    public boolean getCanClose() {
-        return isCanClose;
-    }
-
-    @Override
     public void setCanClose(boolean canClose) {
-        isCanClose = canClose;
+        this.isCanClose = canClose;
     }
-
-    @Override
-    public abstract void onSetItems();
 
     @Override
     public @NotNull Inventory getInventory() {
