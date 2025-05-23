@@ -19,28 +19,26 @@ import java.util.function.Consumer;
 * Created time: 21.05.2025 17:33
 */
 
-public class PageMenu implements InventoryHolder {
+public abstract class PageMenu implements InventoryHolder {
 
     private final Inventory mainPage;
     private final String title;
     private final SimpleMenu.Rows rows;
-    private final ItemStack prevPage;
-    private final ItemStack nextPage;
+    private ItemStack prevPage = setPrevPage();
+    private ItemStack nextPage = setNextPage();
     private final int availableSlots;
 
     private int pages = 1;
-    private int prevSlot;
-    private int nextSlot;
+    private int prevSlot = setPrevPosition();
+    private int nextSlot = setNextPosition();
 
     private final Map<Integer, Inventory> inventoryByPage = new HashMap<>();
     private final Map<Integer, Map<Integer, Consumer<Player>>> actionByPage = new HashMap<>();
     private final Map<Integer, Map<Integer, ItemStack>> itemStackByPage = new HashMap<>();
 
-    public PageMenu(String title, SimpleMenu.Rows rows, ItemStack prevPage, ItemStack nextPage, int availableSlots) {
+    public PageMenu(String title, SimpleMenu.Rows rows, int availableSlots) {
         this.title = title;
         this.rows = rows;
-        this.prevPage = prevPage;
-        this.nextPage = nextPage;
         this.availableSlots = availableSlots;
 
         this.mainPage = Bukkit.createInventory(this, rows.getSize(),
@@ -51,13 +49,9 @@ public class PageMenu implements InventoryHolder {
         itemStackByPage.put(1, new HashMap<>());
     }
 
-    public void setPrevPosition(int slot) {
-        this.prevSlot = slot;
-    }
+    public abstract int setPrevPosition();
 
-    public void setNextPosition(int slot) {
-        this.nextSlot = slot;
-    }
+    public abstract int setNextPosition();
 
     public void createPage() {
         pages++;
@@ -154,16 +148,20 @@ public class PageMenu implements InventoryHolder {
         Inventory inventory = inventoryByPage.get(page);
         if (inventory == null) return;
 
-        inventory.setItem(prevSlot, null);
-        inventory.setItem(nextSlot, null);
-
-        if (page > 1) {
-            setItemInternal(page, prevSlot, prevPage, player -> open(player, page - 1));
-        }
-
-        if (page < pages) {
-            setItemInternal(page, nextSlot, nextPage, player -> open(player, page + 1));
-        }
+       setItemInternal(page, prevSlot, prevPage, (player -> {
+           if(page - 1 < 1) {
+               player.sendMessage(ChatColor.translateAlternateColorCodes('&', getFirstPage()));
+           } else {
+               open(player, page - 1);
+           }
+       }));
+       setItemInternal(page, nextSlot, nextPage, (player -> {
+           if(page + 1 > pages) {
+               player.sendMessage(ChatColor.translateAlternateColorCodes('&', getLastPage()));
+           } else {
+               open(player, page + 1);
+           }
+       }));
     }
 
     public void removeItemWithAction(ItemStack itemStackToRemove, int page) {
@@ -185,6 +183,12 @@ public class PageMenu implements InventoryHolder {
             }
         }
     }
+
+    public abstract ItemStack setNextPage();
+    public abstract ItemStack setPrevPage();
+
+    public abstract String getFirstPage();
+    public abstract String getLastPage();
 
     public int getPages() {
         return pages;
