@@ -30,7 +30,11 @@ public class InventoryListener implements Listener {
         final Player player = (Player) e.getWhoClicked();
         Inventory inventory = e.getClickedInventory();
 
-        if(inventory.getHolder() instanceof PageMenu pageMenu) {
+        if (e.getClickedInventory() == null) return;
+
+        if (e.getView().getTopInventory().getHolder() instanceof PageMenu pageMenu &&
+                e.getClickedInventory().equals(e.getView().getTopInventory())) {
+
             e.setCancelled(true);
             pageMenu.click(player, e.getSlot(), pageMenu.getPageByInventory(e.getView().getTitle()));
         } else if(inventory.getHolder() instanceof Menu menu) {
