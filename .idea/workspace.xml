@@ -10,9 +10,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="03344f96-5046-4c8a-988f-b10c422e32d0" name="Changes" comment="Update">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/falzik/listener/InventoryListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/falzik/listener/InventoryListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/falzik/GuiAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/falzik/GuiAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/falzik/example/TestMenu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/falzik/example/testCMD.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/falzik/menu/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/falzik/menu/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/falzik/menu/SimpleMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/falzik/menu/SimpleMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GuiAPI-1.0-shaded.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/GuiAPI-1.0-shaded.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GuiAPI-1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/falzik/listener/InventoryListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/falzik/listener/InventoryListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/original-GuiAPI-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/original-GuiAPI-1.0.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,10 +64,10 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/almat/IdeaProjects/GuiAPI&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15429688&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
   <component name="RunManager">

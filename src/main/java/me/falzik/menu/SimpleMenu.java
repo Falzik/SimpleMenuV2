@@ -27,19 +27,13 @@ public abstract class SimpleMenu implements Menu {
     private final Map<Integer, Consumer<ItemStack>> itemStackAction = new HashMap<>();
     private final Map<Integer, ItemStack> itemStackMap = new HashMap<>();
 
-    private final String title;
-    private final Rows rows;
-
-    private boolean isCanClose;
-
-    public SimpleMenu(String title, Rows rows, boolean isCanClose) {
-        this.inventory = Bukkit.createInventory(this, rows.getSize(), ChatColor.translateAlternateColorCodes('&', title));
-
-        this.title = title;
-        this.rows = rows;
-        this.isCanClose = isCanClose;
+    public SimpleMenu() {
+        this.inventory = Bukkit.createInventory(this, getRows().getSize(), ChatColor.translateAlternateColorCodes('&', getTitle()));
     }
 
+    public abstract String getTitle();
+    public abstract Rows getRows();
+    public abstract boolean isCanClose();
 
     @Override
     public void click(Player player, int slot) {
@@ -82,7 +76,7 @@ public abstract class SimpleMenu implements Menu {
 
     @Override
     public boolean getCanClose() {
-        return isCanClose;
+        return isCanClose();
     }
 
     @Override
@@ -92,11 +86,6 @@ public abstract class SimpleMenu implements Menu {
         this.itemStackMap.put(slot, itemStack);
 
         getInventory().setItem(slot, itemStack);
-    }
-
-    @Override
-    public void setCanClose(boolean canClose) {
-        this.isCanClose = canClose;
     }
 
     @Override
