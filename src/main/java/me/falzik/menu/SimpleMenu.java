@@ -23,9 +23,7 @@ public abstract class SimpleMenu implements Menu {
 
     private final Inventory inventory;
 
-    private final Map<Integer, Consumer<Player>> playerAction = new HashMap<>();
-    private final Map<Integer, Consumer<ItemStack>> itemStackAction = new HashMap<>();
-    private final Map<Integer, ItemStack> itemStackMap = new HashMap<>();
+    private final Map<Integer, Button> actionMap = new HashMap<>();
 
     public SimpleMenu() {
         this.inventory = Bukkit.createInventory(this, getRows().getSize(), ChatColor.translateAlternateColorCodes('&', getTitle()));
@@ -37,16 +35,22 @@ public abstract class SimpleMenu implements Menu {
 
     @Override
     public void click(Player player, int slot) {
-        Consumer<Player> playerAction = this.playerAction.get(slot);
-        Consumer<ItemStack> itemStackAction = this.itemStackAction.get(slot);
-        ItemStack itemStack = this.itemStackMap.get(slot);
+        Consumer<Player> playerAction = this.actionMap.get(slot).action;
+        Consumer<ItemStack> itemStackAction = this.actionMap.get(slot).itemAction;
+
+        Button button = actionMap.get(slot);
+        Button switchButton = button.getSwitchItem();
+
+        if(switchButton != null) {
+            setItem(slot, switchButton);
+        }
 
         if(playerAction != null) {
             playerAction.accept(player);
         }
 
         if(itemStackAction != null) {
-            itemStackAction.accept(itemStack);
+            itemStackAction.accept(button.getItemStack());
         }
     }
 
@@ -59,18 +63,18 @@ public abstract class SimpleMenu implements Menu {
                 itemMeta.setDisplayName(ChatColor.translateAlternateColorCodes('&', name));
                 itemStack.setItemMeta(itemMeta);
 
-                setItem(i, itemStack);
+                setItem(i, new Button(itemStack, player -> {}));
             }
         }
     }
 
     @Override
-    public void setItem(int slot, ItemStack itemStack) {
+    public void setItem(int slot, Button itemStack) {
         setItem(slot, itemStack, (player -> {}), (itemStack1 -> {}));
     }
 
     @Override
-    public void setItem(int slot, ItemStack itemStack, Consumer<Player> action) {
+    public void setItem(int slot, Button itemStack, Consumer<Player> action) {
         setItem(slot, itemStack, action, (itemStack1 -> {}));
     }
 
@@ -80,12 +84,10 @@ public abstract class SimpleMenu implements Menu {
     }
 
     @Override
-    public void setItem(int slot, ItemStack itemStack, Consumer<Player> action, Consumer<ItemStack> itemStackAction) {
-        this.playerAction.put(slot, action);
-        this.itemStackAction.put(slot, itemStackAction);
-        this.itemStackMap.put(slot, itemStack);
+    public void setItem(int slot, Button itemStack, Consumer<Player> action, Consumer<Button> itemStackAction) {
+        this.actionMap.put(slot, itemStack);
 
-        getInventory().setItem(slot, itemStack);
+        getInventory().setItem(slot, itemStack.getItemStack());
     }
 
     @Override
