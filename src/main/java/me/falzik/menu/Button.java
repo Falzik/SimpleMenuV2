@@ -22,6 +22,7 @@ public class Button {
     public void completeAction(Player player) {
         if(player != null) {
             action.accept(player);
+            itemAction.accept(itemStack);
         }
     }
 

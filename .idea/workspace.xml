@@ -10,16 +10,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="03344f96-5046-4c8a-988f-b10c422e32d0" name="Changes" comment="Update">
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/falzik/menu/Button.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/falzik/menu/Button.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/falzik/menu/Button.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/falzik/menu/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/falzik/menu/Menu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/falzik/menu/SimpleMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/falzik/menu/SimpleMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/GuiAPI-1.0-shaded.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/GuiAPI-1.0-shaded.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/me/falzik/GuiAPI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/falzik/GuiAPI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/falzik/example/TestMenu.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/falzik/example/testCMD.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/me/falzik/menu/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/falzik/menu/Menu.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/me/falzik/menu/SimpleMenu$Rows.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/falzik/menu/SimpleMenu$Rows.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/me/falzik/menu/SimpleMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/falzik/menu/SimpleMenu.class" afterDir="false" />
@@ -178,7 +175,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751519611243</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Update">
+      <option name="closed" value="true" />
+      <created>1765917048692</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1765917048692</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

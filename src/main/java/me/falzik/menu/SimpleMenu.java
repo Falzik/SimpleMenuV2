@@ -35,23 +35,16 @@ public abstract class SimpleMenu implements Menu {
 
     @Override
     public void click(Player player, int slot) {
-        Consumer<Player> playerAction = this.actionMap.get(slot).action;
-        Consumer<ItemStack> itemStackAction = this.actionMap.get(slot).itemAction;
-
         Button button = actionMap.get(slot);
         Button switchButton = button.getSwitchItem();
 
         if(switchButton != null) {
+            actionMap.remove(slot);
             setItem(slot, switchButton);
         }
 
-        if(playerAction != null) {
-            playerAction.accept(player);
-        }
-
-        if(itemStackAction != null) {
-            itemStackAction.accept(button.getItemStack());
-        }
+        Button actualButton = actionMap.get(slot);
+        actualButton.completeAction(player);
     }
 
     @Override
@@ -69,24 +62,13 @@ public abstract class SimpleMenu implements Menu {
     }
 
     @Override
-    public void setItem(int slot, Button itemStack) {
-        setItem(slot, itemStack, (player -> {}), (itemStack1 -> {}));
-    }
-
-    @Override
-    public void setItem(int slot, Button itemStack, Consumer<Player> action) {
-        setItem(slot, itemStack, action, (itemStack1 -> {}));
-    }
-
-    @Override
     public boolean getCanClose() {
         return isCanClose();
     }
 
     @Override
-    public void setItem(int slot, Button itemStack, Consumer<Player> action, Consumer<Button> itemStackAction) {
+    public void setItem(int slot, Button itemStack) {
         this.actionMap.put(slot, itemStack);
-
         getInventory().setItem(slot, itemStack.getItemStack());
     }
 
